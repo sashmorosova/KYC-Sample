@@ -1,0 +1,166 @@
+% EDD / Sanctions-Screening Work Sample — Meridian Leaf Trading Pte. Ltd.
+% Compile: pdflatex EDD-work-sample-Meridian.tex  (run twice for footers/refs to settle)
+% Same template as EDD-work-sample-Lantana.tex — edit body text / tables as needed.
+
+\documentclass[10.5pt]{article}
+\usepackage[a4paper,margin=18mm,top=16mm,bottom=18mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\usepackage{xcolor}
+\definecolor{navy}{HTML}{1A3C5E}
+\definecolor{hrgrey}{HTML}{999999}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=*,itemsep=2pt,topsep=3pt}
+\setlist[itemize]{leftmargin=*,itemsep=2pt,topsep=3pt}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,pdftitle={Enhanced Due Diligence \& Sanctions-Screening Note},pdfsubject={EDD / sanctions-screening work sample -- FATF risk-based methodology},pdfauthor={AML/KYC Analyst (work sample)}}
+\usepackage{parskip}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+
+% ---- running footer: disclaimer + page number ----
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\itshape Illustrative work sample --- disguised hypothetical built from public sources. Not a live compliance record.}
+\fancyfoot[R]{\footnotesize Page \thepage}
+
+% ---- section styling ----
+\titleformat{\section}{\large\bfseries\color{navy}}{\thesection.}{0.5em}{}
+\titlespacing{\section}{0pt}{10pt}{4pt}
+\titleformat*{\subsection}{\bfseries}
+
+\newcommand{\HeaderRow}[2]{\textbf{#1} & #2 \\}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\thispagestyle{fancy}
+
+{\large\bfseries\color{navy} ENHANCED DUE DILIGENCE \& SANCTIONS-SCREENING NOTE}\\[2pt]
+{\small High-risk corporate customer review --- risk-based approach, FATF 40 Recommendations}
+
+\vspace{6pt}
+\noindent
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}L{4.2cm}L{11.5cm}@{}}
+\HeaderRow{Subject entity}{Meridian Leaf Trading Pte. Ltd. (Singapore)}
+\HeaderRow{Review type}{Enhanced Due Diligence (EDD) --- periodic review}
+\HeaderRow{Relationship}{Correspondent USD-clearing relationship}
+\HeaderRow{Risk rating}{\textbf{HIGH}}
+\HeaderRow{Prepared by}{Alexandra Morosova, AML/KYC Analyst}
+\HeaderRow{Disposition}{\textbf{EXIT \& REPORT}}
+\end{tabular}
+
+\vspace{4pt}
+{\footnotesize\itshape Illustrative work sample. Prepared solely to demonstrate methodology. Entity names are disguised; facts, amounts and designations are drawn from the public record of the April 2023 OFAC and DOJ resolutions with British American Tobacco p.l.c.\ and BAT Marketing (Singapore). Not a live compliance record.}
+
+\section{Purpose and methodology}
+This note documents an enhanced due diligence (EDD) review of Meridian Leaf Trading Pte.\ Ltd. (``Meridian''), a Singapore-incorporated tobacco trading company holding USD-clearing accounts through our correspondent network. The review was triggered by adverse media and transaction-monitoring alerts.
+
+Methodology follows the FATF risk-based approach: customer due diligence and EDD under \textbf{FATF Recommendation 10}, beneficial ownership transparency under \textbf{R.24/25}, targeted financial sanctions under \textbf{R.7}, and proliferation financing (PF) risk assessment under \textbf{R.1 and its Interpretive Note} (as amended October 2020), applying the indicator set in the FATF \textit{Guidance on Proliferation Financing Risk Assessment and Mitigation} (June 2021). Sanctions exposure is assessed against the OFAC SDN List, including indirect exposure under OFAC's 50 Percent Rule, and against UN Security Council DPRK designations (UNSCR 1718 regime).
+
+\section{Client overview}
+Meridian was incorporated in Singapore in 2007. Declared activity: wholesale trading and regional marketing of tobacco products across Southeast Asia. The company was acquired that same year from a multinational tobacco group (``the Group'') --- nominal consideration of \textbf{EUR 1} --- as part of the Group's publicly announced exit from a high-risk market. Meridian's counterparties include a manufacturing joint venture located in the DPRK and a chain of trading intermediaries in China and Singapore. Settlement is predominantly in USD via U.S.\ correspondent banks.
+
+Annual USD throughput attributable to the DPRK-linked business line: roughly \textbf{USD 25--40M per year}, part of a pattern that ultimately totalled \textasciitilde USD 250M across 228 payments over the review horizon.
+
+\section{Client risk classification --- HIGH}
+\textbf{Rating: HIGH RISK (recommend: exit / decline).}
+
+\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{@{}L{3.1cm}L{9cm}L{1.8cm}@{}}
+\toprule
+\textbf{Risk factor} & \textbf{Finding} & \textbf{Rating} \\
+\midrule
+Geography & Direct nexus to DPRK (comprehensively sanctioned, FATF blacklist / countermeasures jurisdiction); intermediary flows through higher-risk trade hubs in China and Singapore & High \\
+Industry & Tobacco --- cash-generative, established DPRK revenue channel, documented smuggling typology & High \\
+Ownership & Opaque; economic control inconsistent with legal title (\S4) & High \\
+Products / channels & USD wire transfers through third-party front companies; correspondent clearing exposure & High \\
+Behaviour & Non-responsive to bank RFIs; counterparty requested removal of DPRK references from payment documentation & High \\
+\bottomrule
+\end{longtable}
+
+Any one of the first three factors would justify EDD. Together, and combined with the behavioural indicators, they place the client outside risk appetite regardless of mitigation.
+
+\section{Beneficial ownership tracing}
+Legal ownership on paper is clean: Meridian is held by a Singapore holding structure with local nominee directors. Economic reality diverges.
+
+\begin{itemize}
+\item The EUR 1 sale price is commercially irrational for an entity carrying a revenue-generating stake in a manufacturing JV. Nominal-consideration transfers are a classic marker of a \textbf{control-retention divestment} --- legal title moves, economic interest doesn't.
+\item Post-``divestment,'' the Group's subsidiary continued to supply the DPRK JV with equipment, tobacco inputs and professional services, and the Group's senior management continued to approve decisions affecting the JV. Under FATF R.24, beneficial ownership means \textit{ultimate effective control}, not registered shareholding --- on that test, the Group remains the beneficial controller of the DPRK business line routed through Meridian.
+\item Payment flows corroborate this: DPRK sales proceeds moved through layered Chinese front companies into Meridian, then onward to the Group. Funds followed control.
+\end{itemize}
+
+Conclusion: declared UBO information is materially misleading. That alone is grounds for exit under our BO-verification standard.
+
+\section{Sanctions screening}
+Direct name screening of Meridian and its directors against OFAC SDN, UN and EU consolidated lists: \textbf{no direct match}. That result is not dispositive --- the risk here is indirect.
+
+\begin{itemize}
+\item Two DPRK financial institutions sit in the payment chain: \textbf{Korea Kwangson Banking Corporation (KKBC)}, designated by OFAC in 2009, and \textbf{Foreign Trade Bank (FTB)}, designated in 2013, both under WMD proliferation authorities (31 C.F.R.\ Part 544). Payments in which a blocked bank holds an interest are prohibited from touching the U.S.\ financial system, whoever the named remitter is.
+\item The named remitters on inbound wires are Chinese trading companies with no verifiable business rationale --- front companies interposed precisely so that U.S.\ clearing banks would not detect the DPRK interest.
+\item Under the OFAC 50 Percent Rule, entities owned 50\%+ by blocked persons are themselves blocked even if unlisted; screening must therefore extend to ownership chains of counterparties, not just names on the wire.
+\end{itemize}
+
+\begin{longtable}{@{}L{3.6cm}L{6cm}L{4.4cm}@{}}
+\toprule
+\textbf{Party screened} & \textbf{Lists checked} & \textbf{Result} \\
+\midrule
+Meridian Leaf Trading Pte.\ Ltd. & OFAC SDN/Consol.; UN; EU & No match \\
+Meridian directors (nominee) & OFAC SDN/Consol.; UN; EU & No match \\
+Payment-chain remitters (China) & OFAC SDN/Consol.; UN; EU & No match --- no verifiable business rationale \\
+KKBC / FTB (DPRK banks in chain) & OFAC SDN (WMD authority) & \textbf{Blocked} --- designated 2009 / 2013 \\
+\bottomrule
+\end{longtable}
+
+Net position: no list hit on the named counterparty, severe sanctions exposure through the payment chain. This is exactly the gap name-only screening leaves open.
+
+\section{Red flags}
+Mapped to FATF PF indicators (2021 Guidance) and OFAC enforcement findings.
+
+\begin{longtable}{@{}L{3cm}L{7.5cm}L{3.5cm}@{}}
+\toprule
+\textbf{Red flag} & \textbf{Observation} & \textbf{Typology} \\
+\midrule
+Nominal-consideration divestment & Sale for EUR 1 while operational involvement continues & Control retention \\
+Layered remittance chain & Chinese front companies with no apparent commercial purpose & Concealment of ownership \\
+Concealment requests & Counterparty asked to strip DPRK references from documents & Deliberate concealment \\
+Non-response to RFIs & Requests for information from correspondent banks ignored & Obstruction \\
+Structuring around detection & USD flows structured to obscure blocked-bank interest & Sanctions evasion \\
+High-risk jurisdiction \& sector & DPRK trade in a sector known to fund the regime (\textgreater USD 1B/yr from cigarettes) & Sanctioned-jurisdiction nexus \\
+\bottomrule
+\end{longtable}
+
+\section{Recommendation}
+\begin{enumerate}
+\item \textbf{Decline / exit the relationship.} Risk cannot be mitigated to within appetite; concealment behaviour negates reliance on client-supplied information.
+\item \textbf{File a suspicious transaction report} with the FIU covering the layered DPRK-linked flows; do not tip off the client.
+\item \textbf{Freeze / block review} of any in-flight payments with potential blocked-bank interest; escalate to sanctions counsel re.\ OFAC voluntary self-disclosure if our institution cleared affected USD legs.
+\item \textbf{Lookback:} 10-year transaction review across the correspondent portfolio for the identified Chinese front-company names and payment patterns.
+\item \textbf{Control fix:} extend counterparty screening to beneficial-ownership chains (50 Percent Rule logic), not name-matching only.
+\end{enumerate}
+
+{\footnotesize
+\textbf{Methodology \& standards.} Reviewed against the FATF Recommendations, with primary reference to R.1 and its Interpretive Note (risk-based approach; proliferation-financing risk assessment, as amended October 2020), R.7 (targeted financial sanctions), R.10 (CDD and beneficial ownership) and R.24--25 (transparency of beneficial ownership of legal persons).
+}
+
+\vspace{4pt}
+{\footnotesize\sloppy
+\textbf{Public sources consulted}
+\begin{itemize}
+\item OFAC, \textit{Enforcement Release: British American Tobacco p.l.c.}, 25 Apr 2023 --- \\ \url{https://ofac.treasury.gov/media/931666/download?inline=}
+\item DOJ Press Release, \textit{United States Obtains \$629 Million Settlement with British American Tobacco\ldots}, 25 Apr 2023 --- \\ \url{https://www.justice.gov/opa/pr/united-states-obtains-629-million-settlement-british-american-tobacco-resolve-illegal-sales}
+\item FATF, \textit{The FATF Recommendations} --- R.1, R.7, R.10, R.24/25 --- \\ \url{https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html}
+\item FATF, \textit{Guidance on Proliferation Financing Risk Assessment and Mitigation}, June 2021 --- \\ \url{https://www.fatf-gafi.org/content/dam/fatf-gafi/guidance/Guidance-Proliferation-Financing-Risk-Assessment-Mitigation.pdf}
+\item OFAC, \textit{Revised Guidance on Entities Owned by Persons Whose Property and Interests in Property Are Blocked} (``50 Percent Rule''), 13 Aug 2014.
+\item 31 C.F.R.\ Part 510 (North Korea Sanctions Regulations); 31 C.F.R.\ Part 544 (WMD Proliferators Sanctions Regulations).
+\end{itemize}
+}
+
+\end{document}

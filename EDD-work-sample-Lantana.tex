@@ -1,0 +1,160 @@
+% EDD / Sanctions-Screening Work Sample — Lantana Trade LLP
+% Compile: pdflatex EDD-work-sample-Lantana.tex  (run twice for footers/refs to settle)
+% Edit the \MetaX macros below and the body text; everything else is layout plumbing.
+
+\documentclass[10.5pt]{article}
+\usepackage[a4paper,margin=18mm,top=16mm,bottom=18mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\usepackage{xcolor}
+\definecolor{navy}{HTML}{1A3C5E}
+\definecolor{hrgrey}{HTML}{999999}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=*,itemsep=2pt,topsep=3pt}
+\setlist[itemize]{leftmargin=*,itemsep=2pt,topsep=3pt}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,pdftitle={Enhanced Due Diligence \& Sanctions-Screening Note},pdfsubject={EDD / sanctions-screening work sample -- FATF risk-based methodology},pdfauthor={Financial Crime Analyst (work sample)}}
+\usepackage{parskip}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+
+% ---- running footer: disclaimer + page number, matches Lantana sample ----
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\itshape Illustrative work sample --- prepared from public sources. Not a live compliance record.}
+\fancyfoot[R]{\footnotesize Page \thepage}
+
+% ---- section styling ----
+\titleformat{\section}{\large\bfseries\color{navy}}{\thesection.}{0.5em}{}
+\titlespacing{\section}{0pt}{10pt}{4pt}
+\titleformat*{\subsection}{\bfseries}
+
+% ---- reusable header-fact-table macro ----
+% Usage: \HeaderTable{Subject entity}{...}{Review type}{...}...
+\newcommand{\HeaderRow}[2]{\textbf{#1} & #2 \\}
+
+% ---- reusable risk-table environment shortcut ----
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+\thispagestyle{fancy}
+
+{\large\bfseries\color{navy} ENHANCED DUE DILIGENCE \& SANCTIONS-SCREENING NOTE}\\[2pt]
+{\small High-risk corporate customer review --- risk-based approach, FATF 40 Recommendations}
+
+\vspace{6pt}
+\noindent
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}L{4.2cm}L{11.5cm}@{}}
+\HeaderRow{Subject entity}{Lantana Trade LLP (limited liability partnership, United Kingdom)}
+\HeaderRow{Review type}{Enhanced Due Diligence (EDD)}
+\HeaderRow{Relationship}{Non-resident business account, Estonian branch}
+\HeaderRow{Risk rating}{\textbf{HIGH}}
+\HeaderRow{Prepared by}{Alexandra Morosova, Financial Crime Analyst}
+\HeaderRow{Disposition}{\textbf{EXIT \& REPORT}}
+\end{tabular}
+
+\vspace{4pt}
+{\footnotesize\itshape Illustrative work sample. Prepared solely to demonstrate methodology, using publicly reported facts concerning the Danske Bank Estonia matter (Bruun \& Hjejle report 2018; OCCRP; ICIJ FinCEN Files; Berlingske; CBS 60 Minutes; U.S. DOJ/SEC 2022 resolution). Not a live compliance record.}
+
+\section{Client overview and purpose of review}
+Lantana Trade LLP is a limited liability partnership registered in the United Kingdom, with a registered office at a serviced address in a north-London suburb shared with numerous unrelated entities. The relationship under review is a non-resident business account opened in 2012 at the institution's Estonian branch, operational for roughly eleven months. This review was triggered by two events: a mismatch between the customer's UK statutory filings and observed account activity, and transaction-monitoring alerts for high-value, rapid-turnover payments. It applies a risk-based approach consistent with FATF Recommendation 1 and the institution's EDD policy for non-resident and high-risk corporate customers.
+
+\section{Client risk classification --- HIGH}
+The customer is rated High. It presents a convergence of the factors the institution weights most heavily: a non-resident customer operating through an opaque legal form, ultimate control located in a higher-risk jurisdiction, a nexus to a politically exposed person (PEP), and transactional behaviour inconsistent with its stated profile. Under the institution's methodology any one of the jurisdiction, structure or PEP factors would mandate EDD (FATF R.10, R.12); in combination they place the relationship at the top of the risk scale and require senior-management approval to open or continue.
+
+\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{@{}L{3.1cm}L{9cm}L{1.8cm}@{}}
+\toprule
+\textbf{Risk factor} & \textbf{Finding} & \textbf{Rating} \\
+\midrule
+Customer / product & Non-resident LLP; business account; cross-border payments & High \\
+Legal structure & UK LLP held by corporate members; no verified natural-person owner & High \\
+Geography & Controllers and funds linked to Russia/CIS; members in Marshall Islands \& Seychelles & High \\
+PEP exposure & Indirect control link to a family member of a foreign head of state & High \\
+Transaction profile & Value and velocity inconsistent with ``dormant'' statutory filings & High \\
+\bottomrule
+\end{longtable}
+
+\section{Beneficial ownership tracing}
+Ownership was structured to defeat identification of the natural person(s) in control --- the defining feature of the relationship. Lantana's registered members are two offshore corporate vehicles rather than individuals: one incorporated in the Marshall Islands (reported as Primecross) and one in the Seychelles. Neither jurisdiction requires public disclosure of underlying ownership, and the UK LLP form itself requires registration only of the legal (corporate) members, not the beneficial owner --- the transparency gap addressed by FATF R.24--25. Verification against UK Companies House produced a further contradiction: the entity's filed accounts represented it as dormant / low-turnover while account activity ran to millions daily. Open-source and correspondent-relationship analysis links the controlling interest to individuals associated with Promsberbank (a Moscow-region bank; licence withdrawn 2015, collapsed 2016), and through that institution to Igor Putin --- a board member of Promsberbank and of Russki Zemelnyi Bank, and a cousin of the then-serving Russian head of state. The beneficial owner could not be reliably identified to the standard of FATF R.10; the chain terminates in nominee corporate members rather than a verified natural person.
+
+\begin{longtable}{@{}L{2.6cm}L{5cm}L{2.4cm}L{4cm}@{}}
+\toprule
+\textbf{Layer} & \textbf{Party} & \textbf{Jurisdiction} & \textbf{Role / transparency} \\
+\midrule
+Account holder & Lantana Trade LLP & United Kingdom & Customer of record --- LLP form, no BO disclosure \\
+Registered members & Two offshore companies (incl. Primecross) & Marshall Is. / Seychelles & Legal owners --- no public BO register \\
+Apparent control & Individuals connected to Promsberbank & Russia & De facto control of company and cash flows \\
+PEP nexus & Igor Putin (Promsberbank / RZB boards) & Russia & Family-member / close-associate of head of state \\
+\bottomrule
+\end{longtable}
+
+\section{Sanctions and watchlist screening}
+All identified parties --- the LLP, both corporate members, Promsberbank and the connected individuals --- were screened against the OFAC SDN and Consolidated lists, the UK/OFSI consolidated list, the EU consolidated financial-sanctions list and the UN Security Council Consolidated List, using exact and fuzzy name matching (FATF R.6--7). As of the review date, none returned a positive match to any targeted-financial-sanctions list. That negative result is itself instructive: sanctions screening alone would have cleared this relationship. The material finding is a PEP hit --- the control nexus to an immediate family member of a foreign head of state --- which triggers the enhanced measures of FATF R.12 (senior-management sign-off, establishment of source of wealth and source of funds, enhanced ongoing monitoring), none of which the file evidences. Adverse-media screening returned credible reporting connecting the wider ``Lantana Group'' (including IC Financial Bridge, Cherryfield Management, Chadborg Trade LLP and Ergoinvest LLP) to large-scale layering. Screening is a point-in-time control: the sanctions landscape shifted materially after 2014 and again in 2022, when the connected head of state was himself added to the OFAC SDN List --- so periodic re-screening of retained records is required.
+
+\begin{longtable}{@{}L{3.6cm}L{6cm}L{4.4cm}@{}}
+\toprule
+\textbf{Party screened} & \textbf{Lists checked} & \textbf{Result} \\
+\midrule
+Lantana Trade LLP & OFAC SDN/Consol.; OFSI; EU; UN & No match \\
+Corporate members (MI / SC) & OFAC SDN/Consol.; OFSI; EU; UN & No match \\
+Promsberbank & OFAC SDN/Consol.; OFSI; EU; UN & No match (at review date) \\
+Connected individuals & OFAC SDN/Consol.; OFSI; EU; UN & No sanctions match; PEP + adverse-media hit \\
+\bottomrule
+\end{longtable}
+
+\section{Red-flag analysis}
+The relationship exhibits a cluster of red flags recognised in FATF typologies for the misuse of legal persons and layering. Each is individually explainable; together they cohere only as a laundering vehicle.
+
+\begin{longtable}{@{}L{3cm}L{7.5cm}L{3.5cm}@{}}
+\toprule
+\textbf{Red flag} & \textbf{Observation} & \textbf{Typology} \\
+\midrule
+Structure vs.\ activity & ``Dormant'' filings against millions in daily flow & Misuse of legal persons \\
+Nominee / offshore owners & Members in secrecy jurisdictions; no natural-person BO & Concealment of ownership \\
+Rapid pass-through & Funds in and out within 1--2 days; balances not retained & Layering \\
+Value / velocity & Reported ceiling up to \texteuro90m per week for a new, small entity & Volume vs.\ profile \\
+Sub-threshold payments & Transfers set just under internal control limits & Structuring / smurfing \\
+Round-tripping & Large transfers cycled among \textasciitilde20 affiliated companies & Circular / mirror flows \\
+Jurisdiction \& channel & Ex-Russia/CIS funds routed via correspondent USD clearing & High-risk geography \\
+\bottomrule
+\end{longtable}
+
+\section{Compliance recommendation and disposition}
+\textbf{Recommendation: exit the relationship and report.} EDD cannot resolve the customer to an acceptable residual risk --- the beneficial owner is unverified, the stated business purpose is contradicted by account behaviour, and the control nexus reaches a PEP with no established source of wealth or funds. Continuing would not meet the CDD standard of FATF R.10 or the PEP requirements of R.12. Recommended actions:
+
+\begin{enumerate}
+\item File a suspicious transaction report (STR/SAR) with the relevant FIU covering Lantana Trade LLP and the connected ``Lantana Group'' accounts (FATF R.20); do not tip off.
+\item Restrict, then close the accounts in line with FIU guidance and internal exit procedures; add the entity and identified connected parties to the internal watch / de-risking list.
+\item Escalate to the MLRO and senior management; document that PEP-EDD and senior approval were absent (control gap for remediation).
+\item Retain all records and screening evidence for the statutory period and schedule periodic re-screening against updated sanctions lists.
+\item Run a look-back over linked accounts and correspondent USD activity to quantify exposure and surface further reportable transactions.
+\end{enumerate}
+
+{\footnotesize
+\textbf{Methodology \& standards.} Reviewed against the FATF 40 Recommendations, with primary reference to R.1 (risk-based approach), R.6--7 (targeted financial sanctions), R.10 (CDD and beneficial ownership), R.12 (politically exposed persons), R.16 (wire-transfer information), R.20 (suspicious-transaction reporting), R.22--23 (DNFBPs / trust and company-service providers) and R.24--25 (transparency of beneficial ownership of legal persons and arrangements).
+}
+
+\vspace{4pt}
+{\footnotesize
+\textbf{Public sources consulted}
+\begin{itemize}
+\item Bruun \& Hjejle, \textit{Report on the Non-Resident Portfolio at Danske Bank's Estonian branch} (2018).
+\item OCCRP, \textit{Report: Russia Laundered Millions via Danske Bank Estonia} (2018); \textit{The Russian Laundromat Exposed}.
+\item ICIJ, \textit{FinCEN Files --- Inside scandal-rocked Danske Estonia and the shell-company `factories'} (2022).
+\item Berlingske / Postimees investigative reporting on Lantana Trade LLP and connected parties.
+\item CBS 60 Minutes --- Howard Wilkinson (whistleblower) account (2019).
+\item U.S. DOJ / SEC resolution and SDNY sentencing of Danske Bank (2022--23).
+\item UK Companies House filings; OFAC SDN/Consolidated, UK OFSI, EU and UN consolidated sanctions lists.
+\end{itemize}
+}
+
+\end{document}
